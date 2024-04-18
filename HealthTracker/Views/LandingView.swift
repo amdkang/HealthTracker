@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LandingView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Image(systemName: "globe")
+                Image(systemName: "cross.circle")
                     .imageScale(.large)
                 
                 Text("Welcome to HealthTracker")
@@ -52,5 +52,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    LandingView()
 }
