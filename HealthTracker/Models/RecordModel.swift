@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
+
+struct RecordModel : Codable, Identifiable {
+    @DocumentID var id: String?
+    var value: String
+    var datetime: Date
+}

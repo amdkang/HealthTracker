@@ -11,15 +11,12 @@ struct LandingView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Image(systemName: "cross.circle")
+                Image("logo")
                     .imageScale(.large)
                 
                 Text("Welcome to HealthTracker")
                     .font(.system(size: 24))
                     .padding(30)
-                
-                Text("app description")
-                    .padding(20)
                 
                 NavigationLink {
                     SignupView()
@@ -48,6 +45,7 @@ struct LandingView: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

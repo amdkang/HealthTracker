@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		687E83D72BD81EF700D686D7 /* ConditionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E83D62BD81EF700D686D7 /* ConditionModel.swift */; };
+		687E83D92BD81F7F00D686D7 /* ConditionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E83D82BD81F7F00D686D7 /* ConditionViewModel.swift */; };
+		687E83DB2BD848CA00D686D7 /* ConditionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E83DA2BD848C900D686D7 /* ConditionDetailView.swift */; };
+		687E83DF2BD8897F00D686D7 /* MedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E83DE2BD8897F00D686D7 /* MedModel.swift */; };
+		687E83E12BD889D800D686D7 /* MedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E83E02BD889D800D686D7 /* MedViewModel.swift */; };
+		687E83E32BD8DD6100D686D7 /* MedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E83E22BD8DD6100D686D7 /* MedDetailView.swift */; };
+		687E83E52BD8EE8700D686D7 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E83E42BD8EE8600D686D7 /* RecordModel.swift */; };
+		68F2DD382BD59AF00085E03A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2DD372BD59AF00085E03A /* UserModel.swift */; };
+		68F2DD3C2BD681C00085E03A /* MakeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2DD3B2BD681C00085E03A /* MakeProfileView.swift */; };
+		68F2DD3E2BD683CA0085E03A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2DD3D2BD683CA0085E03A /* HomeView.swift */; };
+		68F2DD402BD6847A0085E03A /* MedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2DD3F2BD6847A0085E03A /* MedsView.swift */; };
+		68F2DD422BD685550085E03A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2DD412BD685550085E03A /* ProfileView.swift */; };
+		68F2DD452BD69A520085E03A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2DD442BD69A520085E03A /* AuthViewModel.swift */; };
+		68F2DD492BD6C64B0085E03A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F2DD482BD6C64B0085E03A /* UserViewModel.swift */; };
 		68FFEA6F2BCE0E2D0082AF59 /* HealthTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FFEA6E2BCE0E2D0082AF59 /* HealthTrackerApp.swift */; };
 		68FFEA712BCE0E2D0082AF59 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FFEA702BCE0E2D0082AF59 /* LandingView.swift */; };
 		68FFEA732BCE0E300082AF59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FFEA722BCE0E300082AF59 /* Assets.xcassets */; };
@@ -23,6 +37,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		682A18C12BDB1E850019C7F4 /* HealthTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthTracker.entitlements; sourceTree = "<group>"; };
+		687E83D62BD81EF700D686D7 /* ConditionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionModel.swift; sourceTree = "<group>"; };
+		687E83D82BD81F7F00D686D7 /* ConditionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionViewModel.swift; sourceTree = "<group>"; };
+		687E83DA2BD848C900D686D7 /* ConditionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionDetailView.swift; sourceTree = "<group>"; };
+		687E83DE2BD8897F00D686D7 /* MedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedModel.swift; sourceTree = "<group>"; };
+		687E83E02BD889D800D686D7 /* MedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedViewModel.swift; sourceTree = "<group>"; };
+		687E83E22BD8DD6100D686D7 /* MedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedDetailView.swift; sourceTree = "<group>"; };
+		687E83E42BD8EE8600D686D7 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
+		68F2DD372BD59AF00085E03A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		68F2DD3B2BD681C00085E03A /* MakeProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeProfileView.swift; sourceTree = "<group>"; };
+		68F2DD3D2BD683CA0085E03A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		68F2DD3F2BD6847A0085E03A /* MedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedsView.swift; sourceTree = "<group>"; };
+		68F2DD412BD685550085E03A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		68F2DD442BD69A520085E03A /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		68F2DD482BD6C64B0085E03A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		68FFEA6B2BCE0E2D0082AF59 /* HealthTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FFEA6E2BCE0E2D0082AF59 /* HealthTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTrackerApp.swift; sourceTree = "<group>"; };
 		68FFEA702BCE0E2D0082AF59 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
@@ -69,8 +98,9 @@
 		68FFEA6D2BCE0E2D0082AF59 /* HealthTracker */ = {
 			isa = PBXGroup;
 			children = (
-				68FFEAC12BCF3B6F0082AF59 /* Models */,
+				682A18C12BDB1E850019C7F4 /* HealthTracker.entitlements */,
 				68FFEA6E2BCE0E2D0082AF59 /* HealthTrackerApp.swift */,
+				68FFEAC12BCF3B6F0082AF59 /* Models */,
 				68FFEAB52BCE3FAB0082AF59 /* Views */,
 				68FFEABC2BCE48E60082AF59 /* ViewModels */,
 				68FFEA7C2BCE13860082AF59 /* GoogleService-Info.plist */,
@@ -95,6 +125,12 @@
 				68FFEAB62BCE3FE00082AF59 /* SignupView.swift */,
 				68FFEAB82BCE40CA0082AF59 /* LoginView.swift */,
 				68FFEABF2BCEBD7A0082AF59 /* ConditionsView.swift */,
+				68F2DD3B2BD681C00085E03A /* MakeProfileView.swift */,
+				68F2DD3D2BD683CA0085E03A /* HomeView.swift */,
+				68F2DD412BD685550085E03A /* ProfileView.swift */,
+				68F2DD3F2BD6847A0085E03A /* MedsView.swift */,
+				687E83DA2BD848C900D686D7 /* ConditionDetailView.swift */,
+				687E83E22BD8DD6100D686D7 /* MedDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,6 +138,10 @@
 		68FFEABC2BCE48E60082AF59 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				68F2DD442BD69A520085E03A /* AuthViewModel.swift */,
+				68F2DD482BD6C64B0085E03A /* UserViewModel.swift */,
+				687E83D82BD81F7F00D686D7 /* ConditionViewModel.swift */,
+				687E83E02BD889D800D686D7 /* MedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -109,6 +149,10 @@
 		68FFEAC12BCF3B6F0082AF59 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				68F2DD372BD59AF00085E03A /* UserModel.swift */,
+				687E83D62BD81EF700D686D7 /* ConditionModel.swift */,
+				687E83DE2BD8897F00D686D7 /* MedModel.swift */,
+				687E83E42BD8EE8600D686D7 /* RecordModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -196,9 +240,23 @@
 			files = (
 				68FFEAB72BCE3FE00082AF59 /* SignupView.swift in Sources */,
 				68FFEA712BCE0E2D0082AF59 /* LandingView.swift in Sources */,
+				68F2DD422BD685550085E03A /* ProfileView.swift in Sources */,
+				687E83D72BD81EF700D686D7 /* ConditionModel.swift in Sources */,
+				68F2DD3C2BD681C00085E03A /* MakeProfileView.swift in Sources */,
+				68F2DD382BD59AF00085E03A /* UserModel.swift in Sources */,
 				68FFEAC02BCEBD7A0082AF59 /* ConditionsView.swift in Sources */,
+				687E83E52BD8EE8700D686D7 /* RecordModel.swift in Sources */,
+				68F2DD3E2BD683CA0085E03A /* HomeView.swift in Sources */,
+				687E83E12BD889D800D686D7 /* MedViewModel.swift in Sources */,
+				687E83E32BD8DD6100D686D7 /* MedDetailView.swift in Sources */,
+				687E83DB2BD848CA00D686D7 /* ConditionDetailView.swift in Sources */,
+				68F2DD452BD69A520085E03A /* AuthViewModel.swift in Sources */,
+				68F2DD492BD6C64B0085E03A /* UserViewModel.swift in Sources */,
 				68FFEAB92BCE40CA0082AF59 /* LoginView.swift in Sources */,
+				687E83D92BD81F7F00D686D7 /* ConditionViewModel.swift in Sources */,
 				68FFEA6F2BCE0E2D0082AF59 /* HealthTrackerApp.swift in Sources */,
+				68F2DD402BD6847A0085E03A /* MedsView.swift in Sources */,
+				687E83DF2BD8897F00D686D7 /* MedModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthTracker/HealthTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthTracker/Preview Content\"";
@@ -357,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthTracker/HealthTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthTracker/Preview Content\"";

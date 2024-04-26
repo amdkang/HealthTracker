@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import FirebaseAuth
 
 struct SignupView: View {
     @State var email = ""
@@ -14,7 +13,7 @@ struct SignupView: View {
     @State var passwordCheck = ""
     @State var showErr: Bool = false
     @State var errMsg = ""
-    @Environment(\.presentationMode) var presentationMode
+    @State var openMakeProfileView: Bool = false
     
     var body: some View {
         VStack(spacing: 20) {
@@ -32,6 +31,7 @@ struct SignupView: View {
                 )
             
             SecureField("Password", text: $password)
+                .textContentType(.oneTimeCode)
                 .padding()
                 .frame(width: 300)
                 .frame(height: 50)
@@ -40,7 +40,9 @@ struct SignupView: View {
                         .stroke(Color.gray, lineWidth: 1)
                 )
             
+            
             SecureField("Re-enter password", text: $passwordCheck)
+                .textContentType(.oneTimeCode)
                 .padding()
                 .frame(width: 300)
                 .frame(height: 50)
@@ -55,8 +57,14 @@ struct SignupView: View {
                     .padding(10)
             }
             
+            NavigationLink(
+                destination: MakeProfileView(email: email, password: password),
+                isActive: $openMakeProfileView,
+                label: { EmptyView() }
+            )
+
             Button(action: signUpClicked) {
-                Text("Sign Up")
+                Text("Next")
                     .foregroundColor(.white)
                     .padding()
                     .frame(width: 300)
@@ -68,18 +76,16 @@ struct SignupView: View {
     
     func validateEmail(_ email: String) -> Bool {
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
         let emailCheck = NSPredicate(format:"SELF MATCHES %@", emailRegex)
         return emailCheck.evaluate(with: email)
     }
     
     func validatePassword(_ password: String) -> Bool {
         let passwordRegex = #"^[a-zA-Z0-9!@#$%^&*()-_=+`~]+$"#
-
-        let passordCheck = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
-        return passordCheck.evaluate(with: password)
+        let passwordCheck = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        let isValidLength = password.count >= 6
+        return passwordCheck.evaluate(with: password) && isValidLength
     }
-
     
     func signUpClicked() {
         if email.isEmpty || password.isEmpty || passwordCheck.isEmpty {
@@ -94,7 +100,7 @@ struct SignupView: View {
         }
         else if !validatePassword(password) {
             showErr = true
-            errMsg = "Invalid password syntax. Valid characters: (a-z, A-z, 0-9) and (!@#$%^&*()-_=+`~)"
+            errMsg = "Invalid password. Must be atleast 6 characters long. Valid characters: (a-z, A-z, 0-9) and (!@#$%^&*()-_=+`~)"
             return
         }
         else if password != passwordCheck {
@@ -102,22 +108,13 @@ struct SignupView: View {
             errMsg = "Passwords do not match"
             return
         } else {
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if let error = error {
-                    showErr = true
-                    errMsg = error.localizedDescription
-                    print(error)
-                    return
-                }
-                showErr = false
-                errMsg = ""
-                self.presentationMode.wrappedValue.dismiss()
-
-            }
+            showErr = false
+            errMsg = ""
+            openMakeProfileView = true
+    
         }
     }
 }
-
 
 #Preview {
     SignupView()

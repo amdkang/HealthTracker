@@ -13,7 +13,8 @@ struct LoginView: View {
     @State var password = ""
     @State var showErr: Bool = false
     @State var errMsg = ""
-    @State var openConditionsView: Bool = false
+    @State var openHomeView: Bool = false
+    @StateObject var authViewModel = AuthViewModel()
     
     var body: some View {
         NavigationView{
@@ -32,6 +33,7 @@ struct LoginView: View {
                     )
                 
                 SecureField("Password", text: $password)
+                    .textContentType(.oneTimeCode)
                     .padding(30)
                     .frame(width: 300)
                     .frame(height: 50)
@@ -47,8 +49,8 @@ struct LoginView: View {
                 }
                 
                 NavigationLink(
-                    destination: ConditionsView(),
-                    isActive: $openConditionsView,
+                    destination: HomeView(),
+                    isActive: $openHomeView,
                     label: { EmptyView() }
                 )
                 
@@ -59,8 +61,8 @@ struct LoginView: View {
                         .frame(width: 300)
                         .background(Color.blue)
                         .cornerRadius(50)
-                        }
-                        .padding(30)
+                }
+                .padding(30)
             }
         }
     }
@@ -71,15 +73,16 @@ struct LoginView: View {
             errMsg = "Please fill out all above fields"
             return
         } else {
-            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                if let error = error {
+            
+            authViewModel.loginUser(email: email, password: password) { success, error in
+                if success {
+                    showErr = false
+                    errMsg = ""
+                    openHomeView = true
+                } else if (error != nil) {
                     showErr = true
-                    errMsg = error.localizedDescription
-                    return
-            }
-                showErr = false
-                errMsg = ""
-                openConditionsView = true
+                    errMsg = "Error logging in. Please try again"
+                }
             }
         }
     }
