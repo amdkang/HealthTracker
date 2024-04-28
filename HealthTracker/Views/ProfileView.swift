@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ProfileView: View {
     @Binding var user: UserModel?
-    @State var openEditProfView: Bool = false
     @ObservedObject var authViewModel = AuthViewModel()
     @State var openLandingView: Bool = false
     
@@ -76,9 +75,5 @@ struct ProfileView: View {
                 }
             }
         }
-    }
-    
-    func editProfile() {
-        openEditProfView = true
     }
 }
